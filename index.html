@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://googleapis.com" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+        body { 
+          font-family: 'Press Start 2P', cursive;
+          background-image: url(./img/lili.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          background-attachment: fixed;
+          margin: 0 auto;   
+          width: 100%;
+          max-width: 1000px;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+
+        img {
+            background: transparent !important
+        }
+
+        .stat-row { 
+          display: flex; 
+          justify-content: space-between; 
+          align-items: center; 
+          margin-bottom: 12px; 
+          font-size: 14px;
+        }
+
+        .stars { 
+          color: #facc15; 
+          letter-spacing: 2px; 
+        }    
+
+        @media (max-width: 480px) {
+          body {
+            padding: 15px;
+          }
+          .stat-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 8px;
+            border-radius: 6px;
+          }
+        }
+  </style>
+  <title>JS - 8.2</title>
+</head>
+
+<body class="flex flex-col min-h-screen justify-between">   
+
+   <div class="text-center mt-6 sm:mt-12">
+      <h1 id="pet-name" class="text-3xl sm:text-5xl text-amber-600 font-bold wrap-break-word"></h1>
+      <p class="text-sm sm:text-3xl mt-4 leading-relaxed">Lovelitchi es un conejito al que le encanta comer y jugar, pero odia que lo obliguen a dormir.</p>
+    </div>
+      
+    <div id="stats-container" class="mt-2 px-4 w-full lg:max-w-3xl max-w-sm sm:max-w-md mx-auto"></div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-3 mb-6 w-full md:max-w-xl mx-auto select-none">    
+      <button onclick="game.duchar()" 
+          class="bg-[#8fa89b] text-white text-[12px] sm:text-[15px] py-3 font-bold border-b-4 border-[#6e8579] active:border-0 active:translate-y-1 rounded tracking-wider transition-all duration-100 cursor-pointer shadow-sm">
+          DUCHAR
+      </button>
+    
+      <button onclick="game.alimentar()" 
+          class="bg-[#d49a6a] text-white text-[12px] sm:text-[15px] py-3 font-bold border-b-4 border-[#b57d4f] active:border-0 active:translate-y-1 rounded tracking-wider transition-all duration-100 cursor-pointer shadow-sm">
+          ALIMENTAR
+      </button>
+    
+      <button onclick="game.jugar()" 
+          class="bg-[#9da372] text-white text-[12px] sm:text-[15px] py-3 font-bold border-b-4 border-[#7e8356] active:border-0 active:translate-y-1 rounded tracking-wider transition-all duration-100 cursor-pointer shadow-sm">
+          JUGAR
+      </button>
+    
+      <button onclick="game.dormir()" 
+          class="bg-[#7b839c] text-white text-[12px] sm:text-[15px] py-3 font-bold border-b-4 border-[#5f667d] active:border-0 active:translate-y-1 rounded tracking-wider transition-all duration-100 cursor-pointer shadow-sm">
+          DORMIR
+      </button>
+    
+      <button onclick="game.reprender()" 
+          class="bg-[#c27d7d] text-white text-[12px] sm:text-[15px] py-3 font-bold border-b-4 border-[#a35e5e] active:border-0 active:translate-y-1 rounded tracking-wider transition-all duration-100 cursor-pointer shadow-sm">
+          REPRENDER
+      </button>
+    
+      <button onclick="game.acariciar()" 
+          class="bg-[#dba0b4] text-white text-[12px] sm:text-[15px] py-3 font-bold border-b-4 border-[#bd8296] active:border-0 active:translate-y-1 rounded tracking-wider transition-all duration-100 cursor-pointer shadow-sm">
+          ACARICIAR
+      </button>    
+    </div>
+        
+     <script src="./js/app.js"></script>
+</body>
+</html>
+
+ 
