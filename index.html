@@ -36,25 +36,24 @@
           color: #facc15; 
           letter-spacing: 2px; 
         }    
-
-               @media (max-width: 640px) {
-          body {
+         @media (max-width: 640px) {
+            body {
             padding: 0 !important;
-            overflow-y: auto !important; /* Разрешаем прокрутку всей страницы на мобильном */
+            overflow-y: auto !important; 
           }
           .game-card {
             border-radius: 0px !important;
             border: none !important;
-            min-height: 100dvh; /* Изменено с height на min-height, чтобы карточка могла растягиваться */
+            min-height: 100dvh; 
             height: auto !important;
             display: flex;
             flex-direction: column;
-            justify-content: start; /* Убираем пустоту сверху, прижимаем контент к началу */
-            gap: 12px; /* Задаем аккуратные отступы между блоками */
+            justify-content: start; 
+            gap: 12px; 
             box-shadow: none !important;
             padding: 16px !important;
           }
-          /* Уменьшаем аватарку на мобильных, чтобы сэкономить место */
+          
           .animated-pet {
             width: 140px !important;
             height: 140px !important;
