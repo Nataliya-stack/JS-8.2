@@ -37,25 +37,41 @@
           letter-spacing: 2px; 
         }    
 
-        @media (max-width: 480px) {
+               @media (max-width: 640px) {
           body {
-            padding: 15px;
+            padding: 0 !important;
+            overflow-y: auto !important; /* Разрешаем прокрутку всей страницы на мобильном */
           }
-          .stat-row {
+          .game-card {
+            border-radius: 0px !important;
+            border: none !important;
+            min-height: 100dvh; /* Изменено с height на min-height, чтобы карточка могла растягиваться */
+            height: auto !important;
+            display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            gap: 6px;
-            background: rgba(255, 255, 255, 0.6);
-            padding: 8px;
-            border-radius: 6px;
+            justify-content: start; /* Убираем пустоту сверху, прижимаем контент к началу */
+            gap: 12px; /* Задаем аккуратные отступы между блоками */
+            box-shadow: none !important;
+            padding: 16px !important;
+          }
+          /* Уменьшаем аватарку на мобильных, чтобы сэкономить место */
+          .animated-pet {
+            width: 140px !important;
+            height: 140px !important;
+          }
+           .stars {
+            font-size: 11px; 
+            letter-spacing: 3px;
+          }
+          .stat-row { 
+           line-height: 30px;
           }
         }
   </style>
   <title>JS - 8.2</title>
 </head>
-
-<body class="flex flex-col min-h-screen justify-between">   
-
+<body class="h-screen sm:min-h-screen flex items-center justify-center p-0 sm:p-4 overflow-hidden"> 
+  
    <div class="text-center mt-6 sm:mt-12">
       <h1 id="pet-name" class="text-3xl sm:text-5xl text-amber-600 font-bold wrap-break-word"></h1>
       <p class="text-sm sm:text-3xl mt-4 leading-relaxed">Lovelitchi es un conejito al que le encanta comer y jugar, pero odia que lo obliguen a dormir.</p>
