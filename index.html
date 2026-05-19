@@ -36,40 +36,24 @@
           color: #facc15; 
           letter-spacing: 2px; 
         }    
-         @media (max-width: 640px) {
-            body {
-            padding: 0 !important;
-            overflow-y: auto !important; 
+         
+        @media (max-width: 480px) {
+          body {
+            padding: 15px;
           }
-          .game-card {
-            border-radius: 0px !important;
-            border: none !important;
-            min-height: 100dvh; 
-            height: auto !important;
-            display: flex;
+          .stat-row {
             flex-direction: column;
-            justify-content: start; 
-            gap: 12px; 
-            box-shadow: none !important;
-            padding: 16px !important;
-          }
-          
-          .animated-pet {
-            width: 140px !important;
-            height: 140px !important;
-          }
-           .stars {
-            font-size: 11px; 
-            letter-spacing: 3px;
-          }
-          .stat-row { 
-           line-height: 30px;
+            align-items: flex-start;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 8px;
+            border-radius: 6px;
           }
         }
   </style>
   <title>JS - 8.2</title>
 </head>
-<body class="h-screen sm:min-h-screen flex items-center justify-center p-0 sm:p-4 overflow-hidden"> 
+<body class="flex flex-col min-h-screen justify-between"> 
   
    <div class="text-center mt-6 sm:mt-12">
       <h1 id="pet-name" class="text-3xl sm:text-5xl text-amber-600 font-bold wrap-break-word"></h1>
